@@ -23,6 +23,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api", require("./routes/createUser.cjs"));
+app.use("/api/", require("./routes/displayData.cjs"));
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}.`);
