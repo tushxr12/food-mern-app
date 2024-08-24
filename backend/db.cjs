@@ -11,9 +11,15 @@ const connectDB = async () => {
     console.log("Database (food-mern-app) connected successfully");
 
     const fetched_data = await mongoose.connection.db.collection("food-items");
-    const data = await fetched_data.find({}).toArray();
-    // console.log(data);
-    global.food_items = data;
+    const FoodData = await fetched_data.find({}).toArray();
+
+    const foodCatData = await mongoose.connection.db.collection(
+      "food-category"
+    );
+    const catData = await foodCatData.find({}).toArray();
+    // console.log(catData);
+    global.food_items = FoodData;
+    global.food_category = catData;
     // console.log(global.food_items);
   } catch (error) {
     console.log(error.message);
