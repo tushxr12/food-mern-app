@@ -28,6 +28,26 @@
   color: #61dafb;
 }
 
+#test:hover
+{
+  background-color: white;
+  color: black;
+  opacity: 0.7;
+}
+
+.mycart:hover
+{
+  opacity: 0.8;
+  background-color: black !important;
+  color: white !important;
+}
+
+.logout:hover{
+  background-color: red !important;
+  color: white !important;
+  text-decoration:dashed;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

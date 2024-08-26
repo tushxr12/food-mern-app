@@ -40,6 +40,7 @@ export default function Navbar() {
                   className="nav-link active fs-5"
                   aria-current="page"
                   to="/"
+                  id="test"
                 >
                   Home
                 </Link>
@@ -51,6 +52,7 @@ export default function Navbar() {
                     className="nav-link active fs-5"
                     aria-current="page"
                     to="/myOrder"
+                    id="test"
                   >
                     My Orders
                   </Link>
@@ -74,7 +76,7 @@ export default function Navbar() {
             ) : (
               <div>
                 <div
-                  className="btn bg-white text-success mx-2"
+                  className="btn bg-white text-primary mx-2 mycart"
                   onClick={() => {
                     setCartView(true);
                   }}
@@ -90,7 +92,7 @@ export default function Navbar() {
                   </Modal>
                 ) : null}
                 <div
-                  className="btn bg-white text-danger mx-2"
+                  className="btn bg-white text-danger mx-2 logout"
                   onClick={handleLogout}
                 >
                   Logout
