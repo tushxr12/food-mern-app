@@ -36,6 +36,7 @@ export default function Card(props) {
           price: finalPrice,
           qty: qty,
           size: size,
+          img: props.foodItem.img,
         });
       }
       return;
@@ -47,6 +48,7 @@ export default function Card(props) {
       price: finalPrice,
       qty: qty,
       size: size,
+      img: props.foodItem.img,
     });
     // console.log(data);
   };
